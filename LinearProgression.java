@@ -49,7 +49,6 @@ public class LinearProgression {
             p = pair.split(",");
             p = pair.split(",");
             x[i]=Integer.parseInt(p[0]);
-            //y[i]=new int[]{0,Integer.parseInt(p[1])};
             y[0][i]=Double.parseDouble(p[1]);
             
         }
