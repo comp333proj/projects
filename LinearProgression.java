@@ -16,7 +16,13 @@ public class LinearProgression {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int[] x;
+        int[][] y;
+        x = new int[50];
+        y = new int[50][50];
+        System.out.print(" * * * Linear Regression Analysusis * * *\n\n");
+        
+        
         
     }
     
