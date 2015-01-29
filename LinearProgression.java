@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package linearprogression;
+package linearprogression.LinearProgression;
 
+import java.util.Scanner;
 /**
  *
  * @author Shant
@@ -18,9 +19,48 @@ public class LinearProgression {
     public static void main(String[] args) {
         int[] x;
         int[][] y;
+        char[] literl;
+        double S1,S2,S3,S4,S5,T,S,B,R,BBAR;
+        int N;
         x = new int[50];
         y = new int[50][50];
+        literl = new char[2];
         System.out.print(" * * * Linear Regression Analysusis * * *\n\n");
+        System.out.print(" How many pairs to be analyzed? ");
+        Scanner sc = new Scanner(System.in);
+        N = sc.nextInt();
+        sc.nextLine();
+        if(N>50){
+            System.out.print(" At present this program can only handle 50 data pairs");
+            return;
+        }
+        System.out.print("\n\n Enter on pair at a time");
+        System.out.print(" and seperate X from Y with a comma\n\n");
+        System.out.print(" Enter pair one: ");
+        String pair;
+        String p[];
+        pair = sc.nextLine();
+        p = pair.split(",");
+        x[0]=Integer.parseInt(p[0]);
+        y[0]=new int[]{0,Integer.parseInt(p[1])};
+        for(int i=1;i<N;i++){
+            System.out.print(" Enter pair numer "+(i+1)+": ");
+            pair = sc.nextLine();
+            p = pair.split(",");
+            p = pair.split(",");
+            x[i]=Integer.parseInt(p[0]);
+            y[i]=new int[]{0,Integer.parseInt(p[1])};
+        }
+        System.out.print(" Would you  like to print the data? ");
+        literl[0] = sc.nextLine().charAt(0);
+        if(literl[0]=='Y'){
+            for(int i=0;i<N;i++){
+                //System.out.print(" Data pair "+(i+1)+" "+x[i]+" "+y[0][i]+"\n");
+            }
+        }
+        
+        
+ 
         
         
         
