@@ -70,9 +70,37 @@ public class LinearProgression {
          S5 += y[0][i] * y[0][i];
       }    
    
+      T = S = B = R = 0;
       
+      T = N * S4 - S1 * S1;
+      S = (N * S3 - S1 * S2) / T;
+      B = (S4 * S2 - S1 * S3) / T;
+      R = (N * S3 - S1 * S2) /
+         (Math.sqrt(Math.abs(((N * S4 - Math.pow(Math.abs(S1), 2)) * (N * S5 - Math.pow(Math.abs(S2), 2)))))); 
       
+      //DecimalFormat formatter = new DecimalFormat("######################.0000000000000000");
+      System.out.print("\n\n SLOPE = ");
+      System.out.printf("%22.16f%n", S);
       
+      System.out.print("\n\n INTERCEPT = ");
+      System.out.printf("%22.16f%n", B);
+      
+      literl[1] = '+';
+      if (Math.abs(B) != B)
+         literl[1] = '-';
+      
+      System.out.print("\n\n EQUATION FOR THE BEST FIT IS : ");
+      BBAR = Math.abs(B);
+      
+      System.out.print(" Y(X) =");
+      System.out.printf("%25.16f", S);
+      System.out.print(" * X" + literl[1]);
+      System.out.printf("%25.16f%n%n%n", BBAR);
+      
+      System.out.print(" LINEAR CORRELATION COEFFICIENT = ");
+      System.out.printf("%22.16f%n", R);
+      
+      System.out.print("LINEAR... Execution completed");   
    }
    
 }
